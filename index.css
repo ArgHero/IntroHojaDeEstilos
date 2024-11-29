@@ -30,7 +30,22 @@ main{
     align-items: center; /* Centra verticalmente el contenido de main */
     padding: 20px;
 }
+.repositorio{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1px;
+    border-radius: 50px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    z-index: 1000;
+    align-items: center;
+
+}
 nav {
+    position: sticky;
+    top: 0;
     font-style:oblique;
     background-color: #4B4376;
     border: 2px solid black;
@@ -68,7 +83,7 @@ article{
     border: 2px black solid;
     margin: 1%;
 }
-img{
+section img{
     width: 95%;
     height: auto; 
     border: 2px solid black;
