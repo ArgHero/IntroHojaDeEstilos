@@ -1,3 +1,4 @@
+/*-----------------Configuraciones generales---------------*/
 *{
     margin: 0;
     border: 0;
@@ -8,27 +9,69 @@
     font-family:'Oswald',sans-serif;
 }
 body{
-    display: block;  
-    background-color: rgb(51, 3, 51);
-    flex-direction: row;
+    margin: 0% 5%;
+    background-color: #000000;
 }
+
 /*-----------------Encabezados---------------*/
 header{
-    display:block;
+    display: flex;
+    align-items: center;
+    width: 100%;
     font-size: 150%;
-    background-color: #E8BCB9;
+    background-color: #000000;
     padding: 10px;
     text-align: center;
-    border: 4px black solid;
+    gap: 1%;
 }
+.icono_personalizado{
+    width: 10vh;
+    font-size: 200%;
+    color: #3E065F;
+}
+.logo_pagina{
+    height: 8vh;
+}
+.search-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 10px; 
+    height: auto;
+    background-color: #000000;
+
+} 
+.search-box { 
+    width: 300px; 
+    padding: 10px; 
+    border: none; 
+    border-radius: 25px 0 0 25px; 
+    outline: none; 
+    font-size: 16px; 
+    background-color: #333; 
+    color: #fff; 
+} 
+.search-button { 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 0 25px 25px 0; 
+    background-color: #555; 
+    color: #fff; cursor: 
+    pointer; font-size: 16px; 
+} 
+.search-button:hover { 
+    background-color: #777; 
+}
+
 /*--------------Cuerpo de la pagina---------------*/
 main{
-    background-color: #432E54;
+    
     padding: 1%;
     display: flex;
-    flex-direction: row; /* Establecemos la dirección de los elementos como columna */
+    flex-direction: row-reverse; /* Establecemos la dirección de los elementos como columna */
     align-items: center; /* Centra verticalmente el contenido de main */
-    padding: 20px;
+    gap: 3%;
+
 }
 .repositorio{
     display: flex;
@@ -45,50 +88,66 @@ main{
 }
 nav {
     position: sticky;
+    display: flex;
+    flex-flow: column wrap;
     top: 0;
-    font-style:oblique;
-    background-color: #4B4376;
+    justify-content: space-between;
+    background-color: #700B97;
     border: 2px solid black;
-    border-radius: 10px;
-    width: 17%; /* Ancho de la barra de navegación */
-    text-size-adjust: 2;
-    height: 100%;
-    min-height: 100vh; /* Altura mínima para que ocupe toda la pantalla */
-    align-self: flex-start;
+    border-radius: 15px;
+    width: 15%; /* Ancho de la barra de navegación */
+    min-height: 60vh; /* Altura mínima para que ocupe toda la pantalla */
+}
+#bangboo{
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 10% 1%;
 }
 nav ul {
+    font-size: 75%;
     list-style:none;
     padding: 2%;
-    margin: 0;
+    margin: 10px;
     
-}
-nav li {
-    padding: 0% 5%;
-    text-align:right;
 }
 section{
     display: flex;
-    flex-flow:wrap row;
-    justify-content: space-around;
-    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
 }
+section::-webkit-scrollbar {
+    height: 1vh;
+}
+section::-webkit-scrollbar-track {
+    background: #000000; /* Color de fondo de la pista */
+}
+section::-webkit-scrollbar-thumb {
+    background: #4B4376; /* Color del pulgar */
+    border-radius: 6px; /* Bordes redondeados del pulgar */
+}
+section::-webkit-scrollbar-thumb:hover {
+    cursor: grab;
+    background: #231f36; /* Color del pulgar al pasar el ratón */
+}
+
 article{
     display: flex;
     flex-flow:wrap column;
     align-items: center;
-    background-color: #4B4376;
+    justify-content: space-between;
+   
     min-width: 400px;
     width: 45%;
     height: auto; 
-    border: 2px black solid;
+
     margin: 1%;
 }
 section img{
+    aspect-ratio: 16/9;
     width: 95%;
-    height: auto; 
-    border: 2px solid black;
-    border-radius:  10px;
-    border-style: double;
+    border: 1px solid black;
+    border-radius: 5px;
     margin: 1% 0;
     transition: transform 0.5s ease-in-out;
 }
@@ -97,44 +156,67 @@ article img:hover{
 }
 div {
     display:flex;
+    justify-content: space-between;
     align-items: center;
-    color: rgb(15, 15, 14);
+    background-color: #700B97;
+    border-radius: 5px;
+    height: 12em;
     
-    backdrop-filter: blur(5px);
-    height: 9em;
-    border: 2px solid black;
 }
 span{
+    
+    color: #FFFFFF;
     order: -1;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+    justify-content: space-between;
     width: 85%;
 }
 
 a{
     text-align: center;
+    color: #FFFFFF;
     font-size: 200%;
     transition-duration: 1s,1s;
     margin-bottom: 5px;
+    text-decoration: none;
 
 }
 a:hover{
-    color: #432E54;
+    text-decoration:double;
+    color: #4B4376;
 
 }
-
-button{
-    background-color: #E8BCB9;
-    border-radius: 30px;
-    border: 2px solid rgb(0, 0, 0) ;
-    padding: 0;
-    font-size: 100%;
-    width: 90%;
+main button {
+  background-color: #000000;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 16px;
+  min-height: 60px;
+  min-width: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+  padding: 10px 5px;
+  margin: 5px;
 }
-button:hover{
-    color: rgb(82, 23, 177);
-    cursor:zoom-in;
+button:disabled {
+  pointer-events: none;
+}
+button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
 }
 .sinopsis p{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -142,9 +224,9 @@ button:hover{
 }
 /*--------------Final de la página--------------*/
 footer{
-    background-color: #E8BCB9;
+    background-color: #000000;
     padding: 10px;
-    border: 4px black solid;
+    color: #ffffff;
     font-size: 300%;
 }
 footer h2{
@@ -153,11 +235,4 @@ footer h2{
     margin-left: 20%;
 
 }
-#bangboo{
-    display: inline;
-    width: auto;
-    height: auto; 
-    border: 0;
-    border-radius: 0;
-    margin: 5px;
-}
+
