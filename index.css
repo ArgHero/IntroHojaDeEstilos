@@ -450,6 +450,7 @@ aside {
     
 }
 .siguiente{
+    position: relative;
     background-color: #700B97;
     border-radius: 25px;
     color: #FFFFFF;
@@ -465,6 +466,7 @@ aside {
     will-change: transform;
     padding: 10px 25px;
     margin-right: 20px;
+    right: -50%;
 }
 /*--------------Final de la página--------------*/
 .az-list {
