@@ -66,25 +66,22 @@ header{
 }
 main{
     width: 70%;
+    min-width: 400px;
     display: flex;
     flex-direction: row; /* Establecemos la dirección de los elementos como columna */
     align-items:start; /* Centra verticalmente el contenido de main */
     gap: 1vw;
 }
-.selector{
-    padding: 1%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
 .carrusel{
     display: flex;
     height: 60vh;
     width: 100%;
+    gap: 1vw;
     overflow: scroll hidden;
     -webkit-overflow-scrolling: touch;
-    gap: 1vw;
     scroll-behavior: smooth;
+    min-width: min-content;
+    max-height:max-content;
 }
 .carrusel::-webkit-scrollbar {
     height: 1vh;
@@ -101,23 +98,34 @@ main{
     background: #231f36; /* Color del pulgar al pasar el ratón */
 }
 /*--------------botonera del carrusel*/
+.selector{
+    padding: 1%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
 .botonera {
     position:relative; 
-    display: flex;
-    list-style: none;
     top: 6vh; /* Ajusta la posición vertical */ 
     left: 2vw; /* Ajusta la posición horizontal */ 
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */ 
-    padding: 0.5vh 0.5vw; 
-    width: 3em;
-    height: 2em;
+    display: flex;
     border-radius: 5px;
+    width: 4em;
+    height: 2em;
+    list-style: none;
+    background-color:rgba(0, 0, 0, 0.5);  /* Fondo semitransparente rgba(0, 0, 0, 0.5);*/ 
+    padding: 0.5vh 0.5vw; 
+    align-items: center;
+    justify-content: center;
+    
 }
 .botonera a{
     text-decoration: none;
     color: white;
-    font-size: 1em;
+    font-size: 2em;
 }
 .botonera a:hover{
     color: #700B97;
@@ -128,13 +136,14 @@ main{
     align-items: center;
     min-width: 100%;
     position: relative; 
+    max-height: fit-content;
 }
 .tarjeta img{
     object-fit: cover;
-    aspect-ratio: 16/6;
+    aspect-ratio: 16/9;
     width: 95%;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 1vw;
     margin: 1% 0;
     transition: transform 0.5s ease-in-out;
 }
@@ -185,7 +194,7 @@ main{
     border-radius: 25px;
     color: #FFFFFF;
     cursor: pointer;
-    font-size: 1.3em;
+    font-size: 1.5em;
     min-height: 60px;
     min-width: 0;
     text-align: center;
@@ -211,22 +220,22 @@ main{
 }
 /*---------Elementos al costado de la pagina------------*/
 aside {
+    width: 30%; /* Ancho de la barra de navegación */
+    min-width: 200px;
     margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
-    width: 30%; /* Ancho de la barra de navegación */
     min-height: 100vh; /* Altura mínima para que ocupe toda la pantalla */
     color: white;
     gap: 10px;
-    
 }
 .search{
     background-color:#161616;
     display: flex;
-    flex-flow: column wrap;
-    border-radius: 5px;
+    flex-direction: column;
+    border-radius: 1vw;
     align-content: space-between;
 }
 .search select{
@@ -236,6 +245,9 @@ aside {
     margin: 2%;
     width: 45%;
     background-color: #3f3e3e;
+}
+.search select:hover{
+    cursor: pointer;
 }
 .search button{
     color: white;
@@ -252,10 +264,11 @@ aside {
     padding: 2%;
     padding-top: 0;
     background-color:#161616; /*Buscar el color adecuado*/
-    border-radius: 5px;
+    border-radius: 1vw;
 }
 .ranking .secciones{
-    justify-content: space-around;
+    
+    justify-content: space-evenly;
     background-color: #3f3e3e; /*Buscar el color chido*/
 }
 .ranking .secciones button{
@@ -269,7 +282,6 @@ aside {
     background-color: #700B97;
 }
 .ranking article{
-    
     align-items: center;
     display: flex;
     padding: 2%;
@@ -287,6 +299,23 @@ aside {
 }
 .ranking .descripcion{
     font-size: 1em;
+}
+/*---------------------categoria------------*/
+.categoria{
+    background-color:#161616;
+    border-radius: 1vw;
+    padding: 5%;
+    
+}
+.categoria .columna{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1%;
+    background-color: #161616;
+
+}
+.categoria .columna input{
+    width: 32%;
 }
 /*--------------Final de la página--------------*/
 footer{
