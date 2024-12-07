@@ -142,7 +142,6 @@ main{
     object-fit: cover;
     aspect-ratio: 16/9;
     width: 95%;
-    border: 1px solid black;
     border-radius: 1vw;
     margin: 1% 0;
     transition: transform 0.5s ease-in-out;
@@ -160,7 +159,7 @@ main{
     align-items: center;
     background-color: #700B97;
     border-radius: 5px;
-    height: 8em;
+    min-height: fit-content;
 }
 .tarjeta span{/*<-------------------texto de la tarjeta*/
     width: 75%;
@@ -168,7 +167,6 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
 }
 .tarjeta span a{
     text-align: center;
@@ -181,7 +179,6 @@ main{
     text-decoration: none;
 }
 .tarjeta a:hover{
-    text-decoration:double;
     color: #4B4376;
 }
 .tarjeta p{
@@ -227,7 +224,7 @@ aside {
     flex-direction: column;
     justify-content: space-between;
     background-color: black;
-    min-height: 100vh; /* Altura mínima para que ocupe toda la pantalla */
+    min-height:fit-content; /* Altura mínima para que ocupe toda la pantalla */
     color: white;
     gap: 10px;
 }
@@ -286,6 +283,7 @@ aside {
     display: flex;
     padding: 2%;
     gap: 2%;
+    border-bottom: 2px #231f36 groove;
 }
 .ranking article span{
     border: 2px white solid;
@@ -307,28 +305,103 @@ aside {
     padding: 5%;
     
 }
-.categoria .columna{
+.categoria {
     display: flex;
     flex-flow: row wrap;
     gap: 1%;
     background-color: #161616;
-
 }
-.categoria .columna input{
-    width: 32%;
-}
-/*--------------Final de la página--------------*/
-footer{
-    background-color: gray;
-    padding: 10px;
-    color: #ffffff;
-    font-size: 300%;
-}
-footer h2{
-    display: inline;
+.categoria a{
     text-align: center;
-    margin-left: 20%;
+    width: 32%;
+    border-right: 2px #231f36 groove;
+    color: white;
+    white-space: wrap;
+    text-decoration: none;
+    transition-duration: 0.2s,0.1s;
+}
+.categoria a:hover{
+    color: #700B97;
+}
+/*---------------------recientes------------*/
+.recientes{
+    background-color: #161616;
+    border-radius: 1vw;
+    padding: 5%;
+}
+.recientes ul{
+    list-style: none;
+}
+.recientes li{
+    margin: 2%;
+    border-bottom: 2px #231f36 groove;
+    
+}
+.recientes .elemento{
+    display: flex;
+    justify-content: space-between;
+}
+.recientes .elemento a{
+    color: white;
+    text-decoration: none;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition-duration: 0.2s,0.1s;
+}
+.recientes .elemento a:hover{
+    color: #700B97;
+}
+.recientes .elemento button{
+    width: 30%;
+    background-color: #700B97;
+    color: white;
+    font-size: 0.7rem;
+    padding: 1%;
+    border-radius: 1em;
+    
+    
+}
 
+/*--------------Final de la página--------------*/
+.az-list {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.az-list a {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #700B97; 
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+}
+/*pie de pagina*/
+footer {
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+    background-color: #161616; /* Fondo de color gris oscuro */
+}
+footer .buttons {
+    margin-top: 1rem;
+}
+footer .button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+footer .button:hover {
+    background-color: #666;
 }
 .repositorio{
     display:flex;
