@@ -68,7 +68,7 @@ main{
     width: 70%;
     min-width: 400px;
     display: flex;
-    flex-direction: row; /* Establecemos la dirección de los elementos como columna */
+    flex-direction: column; /* Establecemos la dirección de los elementos como columna */
     align-items:start; /* Centra verticalmente el contenido de main */
     gap: 1vw;
 }
@@ -215,6 +215,92 @@ main{
   box-shadow: none;
   transform: translateY(0);
 }
+/*----------Titulos de las carteleras------------*/
+.titular{
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 5%;
+}
+/*---------Cartelera de Popular-----------------------*/
+.popular{
+    width: 100%;
+    color: white;
+    gap: 1%;
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.popular .card {
+    width: 19%;
+    aspect-ratio: 9/12;
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+  }
+  .card .image-box {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  .card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 90%;
+    border-radius: inherit;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #700B97;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+  }
+  
+  .card:hover img {
+    filter: grayscale(1) brightness(0.4);
+  }
+  .card:hover::after {/*Margen en la imagen*/
+    opacity: 1;
+    inset: 1vw;
+  }
+  
+  .content {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .content h2,
+  .content p {
+    opacity: 0;
+    transition: 0.2s 0.1s ease;
+  }
+  .content h2 {
+    margin-bottom: 1vh;
+  
+  }
+  .content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    transform: translateY(50%);
+  }
+  .card:hover .content h2 {
+    scale: 1;
+    opacity: 1;
+  }
+  .card:hover .content P {
+    opacity: 1;
+    transform: translateY(0);
+  }
 /*---------Elementos al costado de la pagina------------*/
 aside {
     width: 30%; /* Ancho de la barra de navegación */
@@ -363,7 +449,23 @@ aside {
     
     
 }
-
+.siguiente{
+    background-color: #700B97;
+    border-radius: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1em;
+    min-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    padding: 10px 25px;
+    margin-right: 20px;
+}
 /*--------------Final de la página--------------*/
 .az-list {
     display: flex;
