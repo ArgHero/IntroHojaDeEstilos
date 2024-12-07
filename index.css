@@ -168,6 +168,9 @@ main{
     flex-direction: column;
     align-items: center;
 }
+.tarjeta .watch{
+    width: 25%;
+}
 .tarjeta span a{
     text-align: center;
     align-self:flex-start;
@@ -184,25 +187,18 @@ main{
 .tarjeta p{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 1% 4%;
+    text-align: justify;
 }
 .tarjeta button {
     background-color: #000000;
-    border: 2px solid #1A1A1A;
-    border-radius: 25px;
+    border-radius: 20rem;
     color: #FFFFFF;
     cursor: pointer;
     font-size: 1.5em;
-    min-height: 60px;
-    min-width: 0;
+    width: 90%;
     text-align: center;
-    text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
     will-change: transform;
-    padding: 10px 25px;
-    margin-right: 20px;
 }
  button:disabled {
   pointer-events: none;
@@ -284,11 +280,12 @@ main{
     transition: 0.2s 0.1s ease;
   }
   .content h2 {
-    margin-bottom: 1vh;
+    font-size: 1rem;
+    margin-bottom: 0.5vw;
   
   }
   .content p {
-    font-size: 14px;
+    font-size: 0.8rem;
     line-height: 1.5;
     color: #ffffff;
     transform: translateY(50%);
@@ -450,27 +447,24 @@ aside {
     
 }
 .siguiente{
-    position: relative;
+    display: inline-block;
+    align-self: center;
     background-color: #700B97;
-    border-radius: 25px;
+    border-radius: 25rem;
     color: #FFFFFF;
     cursor: pointer;
     font-size: 1em;
-    min-height: 20px;
     text-align: center;
-    text-decoration: none;
     transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
     user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    will-change: transform;
-    padding: 10px 25px;
-    margin-right: 20px;
-    right: -50%;
+    padding: 0 2%;
+    margin-bottom: 1%;
+    z-index: 1000;
 }
 /*--------------Final de la página--------------*/
 .az-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 0.5rem;
     margin: 1rem 0;
@@ -521,4 +515,33 @@ footer .button:hover {
 .repositorio img{
     height: 12vh;
 }
+@media (max-width: 600px) { 
+    header{
+        justify-content: space-between;
+        font-size: 1rem;
+    }
+    .search-box{
+        display: none;
+    }
+    .search-button{
+        border-radius: 25rem;
+    }
+    .separador { 
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */ 
+        padding: 0 5%;
+        align-items: center;
+    } 
+    main,aside{
+        width: 100%;
+    }
+    .selector{
+        font-size: 0.5rem;
+    }
+    .content h2 {
+        font-size: 0.5rem;
+    }
+    .content p {
+        font-size: 0.4rem;
+    }
 
+}
