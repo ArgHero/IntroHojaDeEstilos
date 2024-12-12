@@ -7,27 +7,36 @@
     font:inherit;
     box-sizing: border-box;
     font-family:'Oswald',sans-serif;
+    
 }
 
 body{
     background-color: #000000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
 }
 /*-----------------Encabezados---------------*/
 header{
+    max-width: 1200px;
+    min-width: 360px;
     display: flex;
     align-items: center;
     width: 100%;
     font-size: 150%;
-    background-color: #000000;
-    padding: 10px;
+    padding: 1%;
     text-align: center;
-    gap: 2vw;
+    gap: 1rem;
 }
 .icono_personalizado{
     width: 10vh;
     text-align: center;
     font-size: 1.5em;
     color: #ffffff;
+    max-width: 60px;;
 }
 .logo_pagina{
     height: 2em;
@@ -40,7 +49,8 @@ header{
     height: auto;
 } 
 .search-box { 
-    width: 300px; 
+    width: 25vw;
+    max-width: 300px;
     padding: 10px; 
     border: none; 
     border-radius: 25px 0 0 25px; 
@@ -64,10 +74,12 @@ header{
 /*--------------Cuerpo de la pagina---------------*/
 .separador{
     display: flex;
+    align-items: flex-start;
+    max-width: 1200px;
+    min-width: 360px;
 }
 main{
     width: 70%;
-    min-width: 400px;
     display: flex;
     flex-direction: column; /* Establecemos la dirección de los elementos como columna */
     align-items:start; /* Centra verticalmente el contenido de main */
@@ -110,8 +122,8 @@ main{
 }
 .botonera {
     position:absolute; 
-    top: 6vh; /* Ajusta la posición vertical */ 
-    left: 2vw; /* Ajusta la posición horizontal */ 
+    top: 1.5vw; /* Ajusta la posición vertical */ 
+    right: 1.5vw; /* Ajusta la posición horizontal */ 
     z-index: 1000;
     display: flex;
     border-radius: 5px;
@@ -142,14 +154,13 @@ main{
 .tarjeta img{
     object-fit: cover;
     aspect-ratio: 16/9;
-    width: 95%;
-    border-radius: 1vw;
+    width: 100%;
     margin: 1% 0;
-    transition: transform 0.5s ease-in-out;
+    /* transition: transform 0.5s ease-in-out; */
 }
-.tarjeta img:hover{
-    transform: scale(1.05);
-}
+/* .tarjeta img:hover{
+    transform: scale(1.02);
+} */
 .tarjeta .sinopsis {
     position: absolute; 
     bottom: 0;
@@ -159,7 +170,7 @@ main{
     justify-content: space-between;
     align-items: center;
     background-color: #700B97;
-    border-radius: 5px;
+    border-radius: 1em 1em 0 0;
     min-height: fit-content;
 }
 .tarjeta span{/*<-------------------texto de la tarjeta*/
@@ -168,6 +179,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 1%;
 }
 .tarjeta .watch{
     width: 25%;
@@ -226,7 +238,6 @@ main{
     padding: 1%;
     display: flex;
     flex-wrap: wrap;
-    
 }
 .popular .card {
     width: 19%;
@@ -234,6 +245,7 @@ main{
     border-radius: 1rem;
     position: relative;
     cursor: pointer;
+    margin-bottom: 1%;
   }
   .card .image-box {
     width: 100%;
@@ -253,7 +265,7 @@ main{
     content: "";
     position: absolute;
     inset: 0;
-    border: 2px solid #700B97;
+    border: 1.3px solid #700B97;
     border-radius: inherit;
     opacity: 0;
     transition: 0.25s ease-in-out;
@@ -264,7 +276,7 @@ main{
   }
   .card:hover::after {/*Margen en la imagen*/
     opacity: 1;
-    inset: 1vw;
+    inset: 5%;
   }
   
   .content {
@@ -302,29 +314,36 @@ main{
 /*---------Elementos al costado de la pagina------------*/
 aside {
     width: 30%; /* Ancho de la barra de navegación */
-    min-width: 200px;
-    margin: 1%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: black;
     min-height:fit-content; /* Altura mínima para que ocupe toda la pantalla */
     color: white;
+    padding: 1%;
     gap: 10px;
 }
-.search{
+.caja{
     background-color:#161616;
-    display: flex;
-    flex-direction: column;
-    border-radius: 1vw;
-    align-content: space-between;
+    border-radius: 0.5rem;
+    padding: 1%;
 }
+.search{ 
+    padding-bottom: 0;
+}
+.search div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    justify-content: center;
+}
+
 .search select{
     color: #969696; /*Buscar el color adecuado*/
     text-align: center;
     appearance:unset;
-    margin: 2%;
     width: 45%;
+    height: 2.1em;
+    margin-bottom: 1%;
     background-color: #3f3e3e;
 }
 .search select:hover{
@@ -333,7 +352,8 @@ aside {
 .search button{
     color: white;
     background-color: #700B97;
-    border-radius: 25px;
+    border-radius: 25em;
+    width: 100%;
 }
 .search button:hover{
     cursor: pointer;
@@ -342,10 +362,7 @@ aside {
 .ranking{
     display: flex;
     flex-direction: column;
-    padding: 2%;
     padding-top: 0;
-    background-color:#161616; /*Buscar el color adecuado*/
-    border-radius: 1vw;
 }
 .ranking .secciones{
     
@@ -383,19 +400,13 @@ aside {
     font-size: 1em;
 }
 /*---------------------categoria------------*/
-.categoria{
-    background-color:#161616;
-    border-radius: 1vw;
-    padding: 5%;
-    
-}
 .categoria {
     display: flex;
     flex-flow: row wrap;
-    gap: 1%;
-    background-color: #161616;
+    gap: 2%;
 }
 .categoria a{
+    overflow: hidden;
     text-align: center;
     width: 32%;
     border-right: 2px #231f36 groove;
@@ -408,11 +419,7 @@ aside {
     color: #700B97;
 }
 /*---------------------recientes------------*/
-.recientes{
-    background-color: #161616;
-    border-radius: 1vw;
-    padding: 5%;
-}
+
 .recientes ul{
     list-style: none;
 }
@@ -428,7 +435,7 @@ aside {
 .recientes .elemento a{
     color: white;
     text-decoration: none;
-    width: 70%;
+    width: 65%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -484,11 +491,13 @@ footer {
     text-align: center;
     color: #aaa;
     font-size: 0.9rem;
-    padding: 1.5rem 0;
+    padding: 1%;
     background-color: #161616; /* Fondo de color gris oscuro */
+    width: 100%;
+    
 }
 footer .buttons {
-    margin-top: 1rem;
+    margin-top: 1em;
 }
 footer .button {
     padding: 0.5rem 1rem;
@@ -505,18 +514,22 @@ footer .button:hover {
 .repositorio{
     display:flex;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 1px;
-    border-radius: 6vh;
-    box-shadow: 2px 2px 2px rgba(240, 235, 235, 0.8);
+    bottom: 1vw;
+    right: 1vw;
+    padding: 0;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.25);
     cursor: pointer;
     z-index: 1000;
 }
 .repositorio img{
-    height: 12vh;
+    height: 7vw;
 }
-@media (max-width: 600px) { 
+/* -------------------Vista para celular (vertical) --------------------*/
+@media only screen and (max-width: 600px) { 
+    body{
+        display:block;
+    }
     header{
         justify-content: space-between;
         font-size: 1rem;
@@ -525,7 +538,7 @@ footer .button:hover {
         display: none;
     }
     .search-button{
-        border-radius: 25rem;
+        border-radius: 25em;
     }
     .separador { 
         flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */ 
@@ -545,3 +558,29 @@ footer .button:hover {
         font-size: 0.4rem;
     }
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1200px){ 
+    body{
+        font-size: 0.75rem;
+    }
+    
+    main{
+        width: 65%;
+    }
+    aside{
+        width: 35%;
+    }
+    .selector{
+        font-size: 100%;
+    }
+    .card{
+        font-size: 1.5vw;
+    }
+    .content H2{
+        font-size: 0.9em;
+    }
+    .content p{
+        font-size: 0.7em;
+    }
+
+ }
