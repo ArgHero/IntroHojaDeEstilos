@@ -93,11 +93,13 @@ main{
     overflow: scroll hidden;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    min-width: min-content;
-    max-height:max-content;
+    min-height: fit-content;
+    max-height: fit-content;
+    /* min-width: min-content;
+    max-height:max-content; */
 }
 .carrusel::-webkit-scrollbar {
-    height: 1vh;
+    height: 0.5vw;
 }
 .carrusel::-webkit-scrollbar-track {
     background: #000000; /* Color de fondo de la pista */
@@ -451,8 +453,6 @@ aside {
     font-size: 0.7rem;
     padding: 1%;
     border-radius: 1em;
-    
-    
 }
 .siguiente{
     display: inline-block;
@@ -514,8 +514,8 @@ footer .button:hover {
 .repositorio{
     display:flex;
     position: fixed;
-    bottom: 1vw;
-    right: 1vw;
+    bottom: 2vw;
+    right: 2vw;
     padding: 0;
     border-radius: 100%;
     box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.25);
@@ -524,6 +524,7 @@ footer .button:hover {
 }
 .repositorio img{
     height: 7vw;
+    min-height: 50px;
 }
 /* -------------------Vista para celular (vertical) --------------------*/
 @media only screen and (max-width: 600px) { 
@@ -556,6 +557,9 @@ footer .button:hover {
     }
     .content p {
         font-size: 0.4rem;
+    }
+    .popular .card {
+        width: 24%;
     }
 }
 
