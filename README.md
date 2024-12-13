@@ -1,24 +1,29 @@
-# Proyecto Final del Módulo 1
+# Proyecto Final del Módulo 2
 
-### Integrantes del equipo
->Saul Hernandez,
+### Estilos de la página desarrollados por:
+>Saul Hernandez
 
 ### Descripción
 
-Se llegó al acuerdo de tomar como punto de partida el sitio [9anime] cuya estructura es lo suficientemente sencilla como para interptetarla por cada integrante, se decidió dividir el contenido por regiones como se muestra en la imágen adjunta al final del documento y de acuerdo con el juicio individual fueron sleccionadas por cada uno.
-El [Proyecto final] puede ser consultado en el repositorio colaborativo.
+Se llegó al acuerdo de tomar como punto de partida el sitio [9anime] cuya estructura es lo suficientemente sencilla como para inferir su estructura, se decidió sustituir el contenedor main por un div que contiene tanto el main como el aside para permitir una vista responsive dentro del CSS.
 
-### Distribución del trabajo
-
-En la siguiente tabla se detallan las actividades realizadas por cada integrante del equipo que correspondiente a las secciones señaladas en la ilustración posterior. Cada integrante trabajó sobre su propia rama del repositorio y posteriormente se hizo un merge para concretar el proyecto. 
 Las ramas se crearon desde la consola de git con el siguiente comando:
 ```ssh
 git checkout -b  <su nombre>
 ```
 
-| Sección | Integrante | Actividades |
+A continuacion se describen las caracteristicas principales de cada sección
+| Sección | Feature | Descripción |
 | ------ | ------ | ------ |
-| 1 | Saul | Dentro del cuerpo principal de la página "body" se creó una sección destinada al contenido de la cartelera principal del sitio donde se usaron imágenes, botones, hipervínculos internos y externos . Todo esto siguiendo una jerarquía semántica de los contenedores main>section>article>span-div. Algunas etiquetas emplean modificadores como class o ID según es necesario. |
+| Header | Barra de busqueda | Cuando la página no es lo suficientemente ancha para mostrarse correctamente se sustituye por un unico icono con la leyenda "buscar".|
+| Separador | Distribución | La apariencia de la página cambia de acuerdo con el ancho disponible, con ayuda de Media Queries es posible cambiar entre las distribuciones para celular, tablet y ordenador. |
+| Main | Carrusel | Como portada de la página se observa un banner del 100% de ancho de la sección que contiene links tanto al openning de la serie como al sitio donde verlo, este carrusel tiene un indice en la parte superior derecha que al dar clic cambia entre los banners|
+| Main | Cartelera | Una serie de pequeñas tarjertas que muestran una breve reseña de la serie al pasar el mouse sobre las imagenes |
+| Aside | Filtros | Serie de 6 pup-up boxes que contienen las diferentes categorias disponibles en la pagina |
+| Aside | Ranking | Top 5 de las series mas vistas por dia, semana y mes según lo seleccione el usuario.|
+| Aside | Categorias | Separa las series de la pagina donde se puede filtrar unicamente en categorias específicas. |
+| Aside | Recientes | El texto contenido en la etiqueta P se recortan automaticamente para no sobreponerse sobre el resto del contenido. |
+| Footer | Botones | Enlaces a la misma página |
 
 ![Mi logo](https://i.imgur.com/HhoQJb5.png)
 
